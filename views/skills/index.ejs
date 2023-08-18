@@ -1,12 +1,15 @@
 <%- include('../partials/header') %>
+<h3>Skills as of <%= time %></h3>
 <ul>
   <% skills.forEach(function(skills) { %>
     <li>
-      <a href="/skills/<%= skills.id %>"><%= skills.language %></a>
+      <a href="/skills/<%= skills.id %>"><%= skills.skill %></a>
       - 
       <%= skills.level !== 'advanced' ? 'can improve' : 'advanced' %>
     </li>
     <% }); %>
   </ul>
+<a href="/skills/new">Add Skill</a>
+
   <%- include('../partials/footer') %>
   
