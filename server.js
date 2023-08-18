@@ -13,6 +13,10 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+
+//mount middleware into the middleware/request pipeline
+//app.use( optional starts with path, <middleware fn>, optional middlwera fn)
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
