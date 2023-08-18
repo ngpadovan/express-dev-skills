@@ -3,6 +3,14 @@
 <ul>
   <% skills.forEach(function(skills) { %>
     <li>
+      <form 
+      action="/skills/<%= skills.id %>?_method=DELETE" 
+      method="POST"
+      class="delete-form"
+      >
+      <button type="submit">X</button>
+
+      </form>
       <a href="/skills/<%= skills.id %>"><%= skills.skill %></a>
       - 
       <%= skills.level !== 'advanced' ? 'can improve' : 'advanced' %>
